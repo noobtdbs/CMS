@@ -9,6 +9,7 @@ urlpatterns = [
 #     path('', login_required(views.main), name='main'),
     path('', views.index, name='index'),
     path('main/', views.main, name='main'),
+    path('accounts/logout', views.logout, name='logout'),
     path('student/<slug:stud_id>/attendance/',
          views.attendance, name='attendance'),
     path('student/<slug:stud_id>/<slug:course_id>/attendance/',

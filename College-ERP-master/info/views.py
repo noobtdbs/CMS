@@ -14,6 +14,9 @@ User = get_user_model()
 def main(request):
     return render(request, 'info/main.html')
 
+def logout(request):
+    return render(request, 'info/logout.html')
+
 @login_required
 def index(request):
     if request.user.is_teacher:
