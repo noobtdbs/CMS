@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'info.User'
 
+CSRF_TRUSTED_ORIGINS = ['*']
 
 # Primary Keys
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
