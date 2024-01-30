@@ -23,13 +23,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'jy8c-n9y=pf##!2^jae-l_5iafq6q%wfq8gdb6c0r5d52su+9y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'info.User'
 
-CSRF_TRUSTED_ORIGINS = ['https://presence-precision.onrender.com/','http://presence-precision.onrender.com/','http://localhost:80']
+CSRF_TRUSTED_ORIGINS = ['https://presence-precision.onrender.com','http://presence-precision.onrender.com']
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Primary Keys
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
