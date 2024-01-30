@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'info.User'
 
-CSRF_TRUSTED_ORIGINS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://presence-precision.onrender.com/','http://presence-precision.onrender.com/','http://localhost:80']
 
 # Primary Keys
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
