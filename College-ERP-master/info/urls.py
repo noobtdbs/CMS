@@ -1,10 +1,13 @@
 from django.urls import path, include
 from . import views
+from django.views.generic import RedirectView
 from django.contrib import admin
 
 
 urlpatterns = [
+     path('', RedirectView.as_view(url='/main', permanent=True), name='redirect_to_main'),
     path('', views.index, name='index'),
+    path('main/', views.main, name='main'),
     path('student/<slug:stud_id>/attendance/',
          views.attendance, name='attendance'),
     path('student/<slug:stud_id>/<slug:course_id>/attendance/',
